@@ -1,1 +1,23 @@
-<p>list-todos works!</p>
+<table border="1">
+    <caption>My Todo's</caption>
+    <thead>
+        <tr>
+            
+            <th>description</th>
+            <th>Target Date</th>
+            <th>is COmpleted</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todo of todos">
+            
+            <td>{{todo.description}}</td>
+
+            <!-- //pipe | to format the data in one form to another -->
+            <td>{{todo.targetDate | date | uppercase}}</td>
+            <td>{{todo.done}}</td>
+
+        </tr>
+    </tbody>
+</table>
