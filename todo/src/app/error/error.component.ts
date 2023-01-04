@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./error.component.css']
 })
 export class ErrorComponent {
+  errorMessage=" An Error Occured! Contact Support"
 
 }
