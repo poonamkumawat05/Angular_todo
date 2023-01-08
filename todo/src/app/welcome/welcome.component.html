@@ -1,7 +1,11 @@
 <h1>Welcome!</h1>
-<div>
+<div class="container">
 Welcome {{name}}.You can mange your todos 
 <a routerLink="/todos">here</a>
 
+</div>
+<div>
+    Click here to get a customized Welcome message
+    <button (click)="getWelcomeMessage()" class="btn btn-success">Get Welcome Messsage</button>
 </div>
 
