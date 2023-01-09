@@ -7,9 +7,9 @@
     <thead>
         <tr>
             
-            <th>description</th>
+            <th>Description</th>
             <th>Target Date</th>
-            <th>is Completed</th>
+            <th>Is Completed</th>
             <th>Update</th>
             <th>Delete</th>
 
@@ -23,7 +23,7 @@
             <!-- //pipe | to format the data in one form to another -->
             <td>{{todo.targetDate | date | uppercase}}</td>
             <td>{{todo.done}}</td>
-            <td><button (click)="deleteTodo(todo.id)" class="btn btn-success">Update</button></td>
+            <td><button (click)="updateTodo(todo.id)" class="btn btn-success">Update</button></td>
             <td><button (click)="deleteTodo(todo.id)" class="btn btn-warning">Delete</button></td>
 
         </tr>
