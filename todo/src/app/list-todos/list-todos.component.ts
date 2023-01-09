@@ -46,21 +46,28 @@ constructor(
 }
 
 ngOnInit(){
+  this.refreshTodos();
+}
+refreshTodos(){
   this.todoService.retriveAllTodos('poonam').subscribe(
     response=>{
       this.todos=response;
     }
   )
-  
 }
 deleteTodo(id: any){
   console.log(`delete todo ${id}`)
   this.todoService.deleteTodo('poonam',id).subscribe(
     response=>{
       console.log(response);
-      this.message=`Delete Successfull ${id}`
+      this.message=`Delete Successfull ${id}`;
+      this.refreshTodos();
     }
   )
+}
+
+updateTodo(id: any){
+  console.log(`update ${id}`);
 }
 
 }
