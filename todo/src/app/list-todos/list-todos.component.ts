@@ -36,23 +36,9 @@ export class ListTodosComponent  implements OnInit{
     //   // },
     // ]
     = [];
-  //   todos=[
-  //   new Todo(1,'Hello',false,new Date()),
-  //   new Todo(2,'Hey',false,new Date()),
-  //   new Todo(3,'How are you',false,new Date()),
-  //   // {id:"1",description:""},
-  //   // {
-  //   //   id:"2",
-  //   //   description:""
-  //   // },
-  //   // {
-  //   //   id:"3",
-  //   //   description:""
-  //   // },
-  // ]
- 
-
-
+   
+    message: any;
+   
 constructor(
   private todoService:TodoDataService
 ){
@@ -66,6 +52,15 @@ ngOnInit(){
     }
   )
   
+}
+deleteTodo(id: any){
+  console.log(`delete todo ${id}`)
+  this.todoService.deleteTodo('poonam',id).subscribe(
+    response=>{
+      console.log(response);
+      this.message=`Delete Successfull ${id}`
+    }
+  )
 }
 
 }
