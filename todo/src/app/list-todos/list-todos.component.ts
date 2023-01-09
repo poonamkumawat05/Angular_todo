@@ -73,4 +73,9 @@ updateTodo(id: any){
   this.router.navigate(['todo',id]);
 }
 
+addTodo(){
+
+this.router.navigate(['todo',-1]);
+}
+
 }
