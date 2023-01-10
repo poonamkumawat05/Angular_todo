@@ -25,5 +25,11 @@ export class WelcomeDataService {
     return this.http.get<HelloWorldBean>(`http://localhost:8080/helloBean/path-variable/${name}`);
     
   }
+  createBasicAuthenticationHttpHeader(){
+    let username='user'
+    let password='password'
+    let basicAuthHeaderString='Basic' + username +password;
+
+  }
 
 }
