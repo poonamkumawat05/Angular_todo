@@ -13,8 +13,8 @@ export class HttpInterceptorBasicAuthService implements HttpInterceptor {
   constructor() {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler) {
-    let username = 'poonam';
-    let password = '123';
+    let username = 'user';
+    let password = 'password';
     let basicAuthHeaderString =
       'Basic ' + Window.bind(username + ':' + password);
     request = request.clone({

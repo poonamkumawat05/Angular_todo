@@ -26,10 +26,15 @@ export class TodoComponent implements OnInit {
     }
   }
   saveTodo() {
-    if(this.id===-1){
+    if (this.id === -1) {
       //create todo
-    }else{
-
+      this.todoService
+      .createTodo('poonam',  this.todo)
+      .subscribe((data) => {
+        console.log(data);
+        this.router.navigate(['todos']);
+      });
+    } else {
     }
     this.todoService
       .updateTodo('poonam', this.id, this.todo)
