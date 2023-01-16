@@ -24,7 +24,7 @@ export class BasicAuthenticationService {
         Authorization:basicAuthHeaderString
       }
     )
-    return this.http.get<AuthenticationBean>(`http://localhost:8080/basicauth`,
+    return this.http.get<AuthenticationBean>(`http://localhost:8081/basicauth`,
     {headers});
     
   }
