@@ -1,1 +1,3 @@
 # Angular_todo
+
+A Todo Application using Angular and Spring Boot would be a web application that allows users to create, read, update, and delete tasks or "todos". The frontend of the application would be built using Angular, a popular JavaScript framework for building web applications. The backend of the application would be built using Spring Boot, a Java-based framework for building stand-alone, production-grade Spring applications. The application would communicate between the frontend and backend using a RESTful API. The data for the application would be stored in a database, such as MySQL and accessed using Spring Data. Users would interact with the application through a web browser, creating, reading, updating and deleting tasks via the Angular-based UI.
